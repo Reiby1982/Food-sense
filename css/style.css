@@ -1,0 +1,175 @@
+/*italic*/
+@font-face { 
+font-family: "ff-tisa-web-pro"; 
+font-style: italic; 
+font-weight: 400; 
+src: url("https://use.typekit.com/af/a2dca8/000000000000000000017080/27..") format("woff2"), 
+url("https://use.typekit.com/af/a2dca8/000000000000000000017080/27..") format("woff"), 
+url("https://use.typekit.com/af/a2dca8/000000000000000000017080/27..") format("opentype"); 
+}
+
+/*normal*/
+@font-face { 
+font-family: "ff-tisa-web-pro"; 
+font-style: normal; 
+font-weight: 400; 
+src: url("https://use.typekit.com/af/a1d110/000000000000000000017087/27..") format("woff2"), 
+url("https://use.typekit.com/af/a1d110/000000000000000000017087/27..") format("woff"), 
+url("https://use.typekit.com/af/a1d110/000000000000000000017087/27..") format("opentype"); 
+}
+.wraper {
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	max-width: 1000px;
+	display: flex;
+    flex-direction: column;
+}
+.border {
+    border: 1px dashed black;
+}
+
+/*Логотип*/
+.logo {
+	height: 120px;
+	margin-top: 20px;
+}
+.logo img {
+	height: 120px;
+	width: 120px;
+}
+.logo img:hover {
+	opacity: 0.8;
+}
+.header {
+	display: flex;
+    flex-direction: row;
+    
+    margin-top: 20px;
+    margin-bottom: 20px; 
+}
+.flex6 {
+    flex:7; /*2 части от родителя*/
+}
+.flex1 {
+    flex:1; /*1 часть от родителя*/
+    border: 1px solid black;
+}
+/*Меню*/
+.menu {
+	height: 120px;
+	margin-top: 20px;
+}
+.menu ul {
+	margin: 0px;
+	margin-left: 200px;
+	padding: 0;
+	text-align: center;
+}
+.menu li {
+	display: inline;
+	list-style-type: none; /*убрать маркеры списка*/
+	padding-left: 0px;
+	margin-bottom:  18px;
+}
+.menu a {
+	display: inline-block;
+	padding: 0px;
+	text-decoration: none;
+	text-align: center;
+	color: #34AC98;
+	padding-top: 35px;
+	padding-right: 15px;
+	padding-left: 15px
+}
+.menu a:hover {
+	color: #EC6635;
+}
+.menu img:hover {
+	margin-bottom: -3px;
+	transition:  0.2s;
+}
+.menu p:hover {
+	margin-top: -3px;
+	transition:  0.2s;
+}
+.menu p {
+	margin: 0;
+	padding: 0;
+}
+
+/*Slider*/
+.slider ul {
+	padding: 0;
+	margin:0;
+}
+.slider li{
+	/*display: none; сначала все слайдеры скрываются и открывается один*/
+
+	height: 445px;
+	background-repeat: no-repeat;
+	background-size: cover; /*auto/contain*/; /*уместить картинку в контейнере*/
+	list-style-type: none; /*убираем точки списка*/
+	display: none;
+}
+.slider li:first-child {
+	background-image: url(../img/Slider1.jpg);
+}
+.slider li:nth-child(2)  {
+	background-image: url(../img/Slider2.jpg);
+}
+.slider li:nth-child(3)  {
+	background-image: url(../img/Slider3.jpg);
+}
+.slider li:last-child  {
+	background-image: url(../img/Slider4.jpg);
+}
+li.active-slider {
+	display: block; /*открыли ранее скрытый li*/
+}
+.slider a {
+	text-decoration: none;
+	font-style: italic;
+}
+.slider h1 {
+	font-size: 20px;
+	color: black;
+	background-color: white;
+	position: absolute;
+	padding: 24px;
+	padding-bottom: 15px;
+	padding-top: 10px;
+	margin: 0;
+	top: 445px;
+}
+.slider h2 {
+	font-size: 17px;
+	color: white;
+	background-color: black;
+	position: absolute;
+	padding: 24px;
+	padding-bottom: 12px;
+	padding-top: 8px;
+	margin: 0;
+	top: 492px;
+}
+.slider a:hover {
+	opacity: 0.8;
+}
+/*Slider-menu*/
+.slider-menu {
+	display: flex;
+    flex-direction: row;
+}
+
+.slider-menu a {
+	display: inline-block;
+	padding: 0px;
+	text-decoration: none;
+	text-align: center;
+	color: #34AC98;
+}
+.mail {
+	display: flex;
+	flex-direction: row;
+}
