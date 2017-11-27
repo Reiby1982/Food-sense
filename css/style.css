@@ -317,6 +317,19 @@ li.active-slider {
 	opacity: 1;
 }
 
+/*Проверка*/
+.example {
+	height: 200px;
+	width: 200px;
+	flex: 1;
+
+}
+.example_out {
+	width: 400px;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid red;
+}
 /*Медиазапросы*/
 /*Normal*/
 @media (min-width: 1170px) {
@@ -329,11 +342,16 @@ li.active-slider {
 	body {
 		background-color: lightgreen;
 	}
+	.row-container-lg {
+		display: flex;
+		flex-direction: row;
+	}
 }
+
 /*Second Point Yellow*/
 @media (min-width: 690px) and (max-width: 979px) {
 	body {
-		background-color: lightyellow;
+		background-color: yellow;
 	}
 	.menu a {
 	font-size: 0.8em;
@@ -349,7 +367,7 @@ li.active-slider {
 	.slider-menu {
 		display: none;
 	}
-	.slider li{
+	.slider li {
 		height: 350px;
 		background-size: cover;
 	}
@@ -371,6 +389,10 @@ li.active-slider {
 		display: flex;
 		flex-direction: column;
 	}
+	.column-container-md {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 
@@ -380,7 +402,7 @@ li.active-slider {
 @media (min-width: 360px) and (max-width: 689px) {
 	
 	body {
-		background-color: lightgray;
+		background-color: red;
 	}
 	.logo {
 		display: flex;
@@ -426,5 +448,8 @@ li.active-slider {
 	}
 	.flex2-sm {
 	flex: 2;
+	}
+	.example_out {
+		flex-direction: column;
 	}
 }
