@@ -237,9 +237,6 @@ li.active-slider {
 
 /*News*/
 .news {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
 	margin: 0;
 	margin-top: 30px;
 	margin-bottom: 20px;  
@@ -278,10 +275,7 @@ li.active-slider {
 	padding-left: 10px;
 	padding-right: 10px;
 }
-.flex_news {
-	flex-basis: 235px;
-	flex: 1;
-}
+
 
 /*Footer */
 .footer {
@@ -319,8 +313,8 @@ li.active-slider {
 
 /*Проверка*/
 .example {
-	height: 200px;
-	width: 200px;
+	height: auto;
+	width: 220px;
 	flex: 1;
 
 }
@@ -329,12 +323,17 @@ li.active-slider {
 	display: flex;
 	flex-direction: row;
 	border: 1px solid red;
+	flex:1;
 }
 /*Медиазапросы*/
 /*Normal*/
 @media (min-width: 1170px) {
 	body {
 		background-color: lightblue;
+	}
+	.row-container-lg {
+		display: flex;
+		flex-direction: row;
 	}
 }
 /*First Point*/
@@ -388,10 +387,12 @@ li.active-slider {
 	.col-container-md {
 		display: flex;
 		flex-direction: column;
+
 	}
 	.column-container-md {
 		display: flex;
 		flex-direction: column;
+		
 	}
 }
 
