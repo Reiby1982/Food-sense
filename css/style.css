@@ -24,9 +24,12 @@ url("https://use.typekit.com/af/a1d110/000000000000000000017087/27/l?subset_id=2
 	display: flex;
     flex-direction: column;
 }
-.border {
+
+/*Разметка страницы*/
+/*.border {
     border: 1px dashed black;
-}
+}*/
+
 body {
 	background-color: #FFF;
 	margin: 0;
@@ -85,6 +88,9 @@ body {
 	margin-left: 200px;
 	padding: 0;
 	text-align: center;
+}
+.menu img{
+	height: 28px;
 }
 .menu li {
 	display: inline;
@@ -205,6 +211,9 @@ li.active-slider {
 	color: #EC6635;
 }
 
+.normal_slider {
+	display: none;
+}
 /*Email*/
 .mail {
 	margin-top: 30px;
@@ -311,47 +320,189 @@ li.active-slider {
 	opacity: 1;
 }
 
+
 /*Проверка*/
-.example {
+.Flex_elem {
 	height: auto;
 	width: 220px;
 	flex: 1;
 
 }
 .example_out {
-	width: 400px;
+	width: 450px;
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	flex:1;
 }
 /*Медиазапросы*/
 /*Normal*/
 @media (min-width: 1170px) {
-	body {
+/*	body {
 		background-color: lightblue;
+	}*/
+	.wraper {
+		max-width: 900px;
 	}
+	.logo {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		top: 2.5em;
+		left: 10px;
+	}
+	.menu {
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		top: 11.5em;
+		left: 10px;
+	}
+	.menu ul {
+		margin: 0;
+		padding: 0;
+
+	}
+	.menu li {
+		display: block;
+		margin: 0;
+		padding: 0px;
+		padding-left: 5px;
+		text-align: left;
+	}
+	.menu a {
+		padding: 0px;
+	}
+	.menu p {
+		font-size: 0.8em;
+		padding: 0px;
+		padding-left: 10px;
+	}
+	.menu img {
+		padding: 0px; 
+	}
+	.menu img:hover {
+	margin-right: -7px;
+	transition:  0.2s;
+	}
+	.menu p:hover {
+	margin-top: 0px;	
+	}
+	.normal {
+		display: inline-flex;
+		justify-content: left;
+	}
+
+	.normal_slider {
+		display: inline;
+		font-size: 10px;
+		padding-top: -10px;
+	}
+
 	.row-container-lg {
 		display: flex;
 		flex-direction: row;
+	}
+	.slider h1 {
+		top: 355px;
+		opacity: 0.9;
+	}
+	.slider h2 {
+		top: 405px;
+		opacity: 0.9;
+	}
+	.slider-menu a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.social {
+		position: absolute;
+		top: 380px;
+		left: 10px;
+		max-width: 120px;
+	}
+	.border-bottom {
+		border-bottom: 1px dashed #AAA;
+	}
+	.social h1 {
+		font-family: ff-tisa-web-pro, Georgia, sans-serif
+		font-style: normal;
+		font-size: 9px;
+		font-weight: 400;
+		color: black;
+		margin-bottom: 9px;
+		margin-top: 35px;
+	}
+	.social p {
+		font-family: ff-tisa-web-pro, Georgia, sans-serif
+		font-style: italic;
+		font-size: 8px;
+		font-weight: 400;
+		color: black;
+		margin-bottom: 15px;
+	}
+	.button ul{
+		display: inline-flex;
+		margin: 0;
+		margin-top: 5px;
+		padding: 0;
+		list-style-type: none;
+		border:1px solid #AAA;
+		border-radius: 3px;
+		background-color: white;
+	}
+	.button li{
+		padding: 0;
+		margin: 0;
+	}
+	.button p {
+		font-size: 7px;
+		padding: 5px;
+		padding-top: 7px;
+		padding-right: 15px;
+		margin: 0;
+		color: #34AC98;
+	}	
+	.button img {
+		font-size: 5px;
+		padding: 3px;
+		margin: 0;
+		margin-left: 5px;
+	}
+	.button ul:hover {
+		background-color: #D9EFEC;
+		box-shadow: 2px 2px 5px #AAA;
+		transition: 0.2s; 
+	}
+	.button p:hover {
+		color: #EC6635;
 	}
 }
 /*First Point*/
 @media (min-width: 980px) and (max-width: 1169px) {
-	body {
-		background-color: lightgreen;
+	.wraper {
+		max-width: 850px;
 	}
+/*	body {
+		background-color: lightgreen;
+	}*/
 	.row-container-lg {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
+		border-color: green;
 	}
+	.social {
+	display: none;
+}
 }
 
 /*Second Point Yellow*/
 @media (min-width: 690px) and (max-width: 979px) {
-	body {
-		background-color: yellow;
-	}
+/*	body {
+		background-color: lightyellow;
+	}*/
 	.menu a {
 	font-size: 0.8em;
 	}
@@ -387,24 +538,23 @@ li.active-slider {
 	.col-container-md {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
+	}
+	.example_out {
+		margin:0 auto;
+	}
+	.social {
+		display: none;
+	}
 
-	}
-	.column-container-md {
-		display: flex;
-		flex-direction: column;
-		
-	}
 }
 
-
-
-
 /*Third Point Gray*/
-@media (min-width: 360px) and (max-width: 689px) {
+@media (min-width: 480px) and (max-width: 689px) {
 	
-	body {
-		background-color: red;
-	}
+/*	body {
+		background-color: lightgray;
+	}*/
 	.logo {
 		display: flex;
 		justify-content: center;
@@ -432,13 +582,14 @@ li.active-slider {
 		background-size: cover;
 	}
 	.slider h1 {
-		font-size: 15px;
-		top:560px;
+		font-size: 13px;
+		top:510px;
 		opacity: 0.8;
+		margin: 0;
 	}
 	.slider h2 {
-		font-size: 13px;
-		top: 598px;
+		font-size: 10px;
+		top: 557px;
 		opacity: 0.8;
 	}
 	.mail {
@@ -451,6 +602,103 @@ li.active-slider {
 	flex: 2;
 	}
 	.example_out {
+		width: 250px;
 		flex-direction: column;
+		justify-content: center;
+		margin:0 auto;
 	}
+	.Flex_elem {
+		margin:0 auto;
+	}
+	.social {
+	display: none;
+	}
+}
+/*Fourth Point Gray*/
+@media (max-width: 479px) {
+	.mail p {
+		display: none;
+	}
+/*	body {
+		background-color: lightpink;
+	}*/
+	.logo {
+		display: flex;
+		justify-content: center;
+	}
+	.menu {
+		display: flex;
+		justify-content: center;
+	}
+	.menu ul {
+		margin: 0 auto;
+	}
+	.menu p { 
+		display: none;
+	}
+	.menu img {
+	display: inline-block;
+	height: 20px;
+	box-shadow: 2px 2px 5px #AAA;
+	}
+	.menu a {
+	padding-top: 0;
+	padding-left: 7px;
+	padding-right: 7px;	
+	}
+	.slider-menu {
+	display: none;
+	}
+	.slider li{
+		height: 350px;
+		background-size: cover;
+	}
+	.slider h1 {
+		font-size: 10px;
+		top:410px;
+		opacity: 0.8;
+		margin: 0;
+	}
+	.slider h2 {
+		font-size: 7.8px;
+		top: 452px;
+		opacity: 0.8;
+	}
+	.mail form {
+		padding-left: 5px;
+	}
+	.header {
+	flex-direction: column;
+	}
+	.flex2-sm {
+	flex: 2;
+	}
+	.example_out {
+		width: 250px;
+		flex-direction: column;
+		justify-content: center;
+		margin:0 auto;
+	}
+	.Flex_elem {
+		margin:0 auto;
+	}
+	.footer img {
+	height: 20px;
+	opacity: 0.4;
+	box-shadow: 2px 2px 5px #AAA;
+	margin: 0 auto;
+	}
+	.footer p {
+	font-size:  0.5em;
+	}	
+	.footer a {
+	font-size:  0.5em;;
+	}
+	.column-container-sm {
+		display: flex;
+		flex-direction: row;
+	}
+	.social {
+	display: none;
+	}	
 }
